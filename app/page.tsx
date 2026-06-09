@@ -1,65 +1,156 @@
-import Image from "next/image";
+"use client";
+
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="bg-slate-950 text-white min-h-screen">
+
+      {/* Header */}
+      <header className="flex justify-between items-center px-8 py-5 border-b border-slate-800">
+        <h1 className="text-2xl font-bold">Tokko Products</h1>
+        <div className="flex gap-4">
+          <a href="#products" className="text-slate-300">Products</a>
+          <a href="#pricing" className="text-slate-300">Pricing</a>
+          <a href="#about" className="text-slate-300">About</a>
+          <a href="#contact" className="text-slate-300">Contact</a>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
+      </header>
+
+      {/* Hero */}
+      <section className="text-center py-24 px-6">
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-5xl md:text-7xl font-bold mb-6"
+        >
+          One Platform. Multiple Solutions.
+        </motion.h1>
+        <p className="text-slate-400 max-w-2xl mx-auto text-lg">
+          Pedicive Hygiene Care brings powerful SaaS products under the Tokko brand — helping schools, societies, families, and businesses manage everything digitally.
+        </p>
+      </section>
+
+      {/* Products */}
+      <section id="products" className="py-20 px-6 max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          className="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-teal-500 transition-all"
+        >
+          <h2 className="text-xl font-semibold mb-2">Tokko School</h2>
+          <p className="text-slate-400">School ERP for fees, attendance & exams.</p>
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-teal-500 transition-all"
+        >
+          <h2 className="text-xl font-semibold mb-2">Tokko Society</h2>
+          <p className="text-slate-400">Visitor, maintenance & alerts management.</p>
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-teal-500 transition-all"
+        >
+          <h2 className="text-xl font-semibold mb-2">Tokko GST</h2>
+          <p className="text-slate-400">GST billing software for businesses.</p>
+        </motion.div>
+
+        {/* NEW: Tokko Health Card */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-teal-500 transition-all"
+        >
+          <h2 className="text-xl font-semibold mb-2">Tokko Health</h2>
+          <p className="text-slate-400">Family Health Monitor - Track BP, sugar, medications with AI insights.</p>
+        </motion.div>
+      </section>
+
+      {/* Pricing (IMPORTANT for payment gateway) */}
+      <section id="pricing" className="py-20 px-6 text-center bg-slate-900">
+        <h2 className="text-3xl font-bold mb-10">Pricing</h2>
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="border border-slate-700 rounded-2xl p-6">
+            <h3 className="text-xl font-semibold">Basic</h3>
+            <p className="text-2xl mt-2">₹499 / month</p>
+            <p className="text-slate-400 mt-2">For small schools & societies</p>
+          </div>
+          <div className="border border-slate-700 rounded-2xl p-6">
+            <h3 className="text-xl font-semibold">Standard</h3>
+            <p className="text-2xl mt-2">₹999 / month</p>
+            <p className="text-slate-400 mt-2">Advanced features included</p>
+          </div>
+          <div className="border border-slate-700 rounded-2xl p-6">
+            <h3 className="text-xl font-semibold">Enterprise</h3>
+            <p className="text-2xl mt-2">Custom</p>
+            <p className="text-slate-400 mt-2">For large organizations</p>
+          </div>
+        </div>
+      </section>
+
+      {/* About */}
+      <section id="about" className="py-20 px-6 text-center max-w-3xl mx-auto">
+        <h2 className="text-3xl font-bold mb-4">About Company</h2>
+        <p className="text-slate-400">
+          Pedicive Hygiene Care operates Tokko Products, providing SaaS software for schools, societies, families, and businesses across India.
+        </p>
+      </section>
+
+      {/* Contact */}
+      <section id="contact" className="py-20 px-6 text-center">
+        <h2 className="text-3xl font-bold mb-4">Contact</h2>
+        <p className="text-slate-400">Email: tokkosociety@gmail.com</p>
+        <p className="text-slate-400">Website: https://tokko.co.in</p>
+      </section>
+
+      {/* Privacy Policies - Updated */}
+      <section className="py-20 px-6 max-w-4xl mx-auto">
+        <h2 className="text-2xl font-bold mb-4">Privacy Policies</h2>
+        <p className="text-slate-400 mb-6">
+          We respect your privacy. Each product has its own privacy policy detailing how we collect and use data.
+        </p>
+        <div className="grid md:grid-cols-2 gap-4">
+          <a href="/health/privacy-policy" className="block p-4 bg-slate-900 border border-slate-800 rounded-xl hover:border-teal-500 transition-all">
+            <h3 className="font-semibold mb-1">Tokko Health</h3>
+            <p className="text-sm text-slate-400">Family Health Monitor Privacy Policy</p>
           </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+          <a href="/school/privacy-policy" className="block p-4 bg-slate-900 border border-slate-800 rounded-xl hover:border-teal-500 transition-all">
+            <h3 className="font-semibold mb-1">Tokko School</h3>
+            <p className="text-sm text-slate-400">School ERP Privacy Policy</p>
+          </a>
+          <a href="/society/privacy-policy" className="block p-4 bg-slate-900 border border-slate-800 rounded-xl hover:border-teal-500 transition-all">
+            <h3 className="font-semibold mb-1">Tokko Society</h3>
+            <p className="text-sm text-slate-400">Society Management Privacy Policy</p>
+          </a>
+          <a href="/gst/privacy-policy" className="block p-4 bg-slate-900 border border-slate-800 rounded-xl hover:border-teal-500 transition-all">
+            <h3 className="font-semibold mb-1">Tokko GST</h3>
+            <p className="text-sm text-slate-400">GST Billing Privacy Policy</p>
           </a>
         </div>
-      </main>
+      </section>
+
+      {/* Terms */}
+      <section className="py-20 px-6 max-w-4xl mx-auto">
+        <h2 className="text-2xl font-bold mb-4">Terms of Service</h2>
+        <p className="text-slate-400">
+          By using Tokko products, you agree to our terms. Users are responsible for maintaining account security and proper use of services.
+        </p>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-slate-800 text-center p-6 text-slate-500">
+        © 2026 Pedicive Hygiene Care (Tokko Products)
+      </footer>
+
     </div>
   );
 }
