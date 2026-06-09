@@ -113,30 +113,42 @@ export default function Home() {
       </section>
 
       {/* Privacy Policies - Updated */}
-      <section className="py-20 px-6 max-w-4xl mx-auto">
-        <h2 className="text-2xl font-bold mb-4">Privacy Policies</h2>
-        <p className="text-slate-400 mb-6">
-          We respect your privacy. Each product has its own privacy policy detailing how we collect and use data.
-        </p>
-        <div className="grid md:grid-cols-2 gap-4">
-          <a href="/health/privacy-policy" className="block p-4 bg-slate-900 border border-slate-800 rounded-xl hover:border-teal-500 transition-all">
-            <h3 className="font-semibold mb-1">Tokko Health</h3>
-            <p className="text-sm text-slate-400">Family Health Monitor Privacy Policy</p>
-          </a>
-          <a href="/school/privacy-policy" className="block p-4 bg-slate-900 border border-slate-800 rounded-xl hover:border-teal-500 transition-all">
-            <h3 className="font-semibold mb-1">Tokko School</h3>
-            <p className="text-sm text-slate-400">School ERP Privacy Policy</p>
-          </a>
-          <a href="/society/privacy-policy" className="block p-4 bg-slate-900 border border-slate-800 rounded-xl hover:border-teal-500 transition-all">
-            <h3 className="font-semibold mb-1">Tokko Society</h3>
-            <p className="text-sm text-slate-400">Society Management Privacy Policy</p>
-          </a>
-          <a href="/gst/privacy-policy" className="block p-4 bg-slate-900 border border-slate-800 rounded-xl hover:border-teal-500 transition-all">
-            <h3 className="font-semibold mb-1">Tokko GST</h3>
-            <p className="text-sm text-slate-400">GST Billing Privacy Policy</p>
-          </a>
-        </div>
-      </section>
+<section className="py-20 px-6 max-w-4xl mx-auto">
+  <h2 className="text-2xl font-bold mb-4">Privacy Policies</h2>
+  <p className="text-slate-400 mb-6">
+    We respect your privacy. Each product has its own privacy policy detailing how we collect and use data.
+  </p>
+  <div className="grid md:grid-cols-2 gap-4">
+    <a href="/health/privacy-policy" className="block p-4 bg-slate-900 border border-slate-800 rounded-xl hover:border-teal-500 transition-all">
+      <h3 className="font-semibold mb-1">Tokko Health</h3>
+      <p className="text-sm text-slate-400">Family Health Monitor Privacy Policy</p>
+    </a>
+    <a href="/school/privacy-policy" className="block p-4 bg-slate-900 border border-slate-800 rounded-xl hover:border-teal-500 transition-all">
+      <h3 className="font-semibold mb-1">Tokko School</h3>
+      <p className="text-sm text-slate-400">School ERP Privacy Policy</p>
+    </a>
+    <a href="/society/privacy-policy" className="block p-4 bg-slate-900 border border-slate-800 rounded-xl hover:border-teal-500 transition-all">
+      <h3 className="font-semibold mb-1">Tokko Society</h3>
+      <p className="text-sm text-slate-400">Society Management Privacy Policy</p>
+    </a>
+    <a href="/gst/privacy-policy" className="block p-4 bg-slate-900 border border-slate-800 rounded-xl hover:border-teal-500 transition-all">
+      <h3 className="font-semibold mb-1">Tokko GST</h3>
+      <p className="text-sm text-slate-400">GST Billing Privacy Policy</p>
+    </a>
+  </div>
+</section>
+
+{/* NEW: Account Deletion Section */}
+<section className="py-20 px-6 max-w-4xl mx-auto">
+  <h2 className="text-2xl font-bold mb-4">Account Deletion</h2>
+  <p className="text-slate-400 mb-6">
+    Request deletion of your account and all associated data.
+  </p>
+  <a href="/account-deletion" className="block p-4 bg-slate-900 border border-slate-800 rounded-xl hover:border-teal-500 transition-all">
+    <h3 className="font-semibold mb-1">Delete Your Account</h3>
+    <p className="text-sm text-slate-400">Learn how to delete your Tokko Health account and data</p>
+  </a>
+</section>
 
       {/* Terms */}
       <section className="py-20 px-6 max-w-4xl mx-auto">
